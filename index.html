@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Nusuk App Umrah Challenge KEYS</title>
+
+  <!-- PWA & Mobile Web App Meta Tags -->
+  <meta name="theme-color" content="#0a4d36" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Nusuk KEYS" />
+  <meta name="description" content="Share and discover Nusuk App Umrah Challenge KEYS easily." />
+
+  <!-- Dynamic Manifest & Apple Touch Icon Placeholder -->
+  <link id="pwa-manifest" rel="manifest" href="" />
+  <link id="apple-icon" rel="apple-touch-icon" href="" />
+
+  <!-- Google Fonts: Inter, Playfair Display (Serif), Amiri (Arabic), JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emeraldDeep: '#0a4d36',
+            emeraldDark: '#073b29',
+            emeraldLight: '#136b4c',
+            goldMarquee: '#e3c059',
+            goldAccent: '#c69320',
+            goldSoft: '#f9f5e6',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            arabic: ['Amiri', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom Marquee Animation */
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes marqueeScrollRTL {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(50%); }
+    }
+
+    .marquee-wrapper {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .marquee-track {
+      display: inline-flex;
+      width: max-content;
+      animation: marqueeScroll 28s linear infinite;
+    }
+
+    [dir="rtl"] .marquee-track {
+      animation: marqueeScrollRTL 28s linear infinite;
+    }
+
+    .marquee-wrapper:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    /* Subtle Islamic Geometric Pattern for Header */
+    .islamic-pattern {
+      background-color: #0a4d36;
+      background-image:
+        radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.045) 2px, transparent 0),
+        radial-gradient(circle at 75px 75px, rgba(255, 255, 255, 0.045) 2px, transparent 0),
+        linear-gradient(45deg, rgba(227, 192, 89, 0.04) 25%, transparent 25%, transparent 75%, rgba(227, 192, 89, 0.04) 75%),
+        linear-gradient(-45deg, rgba(227, 192, 89, 0.04) 25%, transparent 25%, transparent 75%, rgba(227, 192, 89, 0.04) 75%);
+      background-size: 50px 50px;
+    }
+
+    /* Card Corner Cutout Styling matching screenshot */
+    .copy-corner-btn {
+      border-bottom-left-radius: 1.25rem;
+    }
+    [dir="rtl"] .copy-corner-btn {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 1.25rem;
+    }
+
+    /* Smooth Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-[#f7f9f8] text-slate-800 antialiased min-h-screen flex flex-col selection:bg-emeraldDeep selection:text-white">
+
+  <!-- 1. TOP GOLD MARQUEE BANNER -->
+  <div class="bg-gradient-to-r from-[#dfb94c] via-[#e9c865] to-[#dfb94c] text-[#2a2105] border-b border-[#cfa83a] py-1.5 text-xs sm:text-sm font-medium shadow-xs z-30">
+    <div class="marquee-wrapper">
+      <div class="marquee-track items-center gap-8 px-4">
+        <span class="inline-flex items-center gap-2">
+          <span>✨</span>
+          <span class="font-arabic text-base sm:text-lg font-bold tracking-wide">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ — أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ وَأَتُوبُ إِلَيْهِ</span>
+          <span>✨</span>
+          <span data-i18n="marqueeSalawat">Recite Salawat upon the Prophet ﷺ</span>
+          <span>✨</span>
+        </span>
+        <span class="inline-flex items-center gap-2">
+          <span>✨</span>
+          <span class="font-arabic text-base sm:text-lg font-bold tracking-wide">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ — أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ وَأَتُوبُ إِلَيْهِ</span>
+          <span>✨</span>
+          <span data-i18n="marqueeSalawat">Recite Salawat upon the Prophet ﷺ</span>
+          <span>✨</span>
+        </span>
+        <span class="inline-flex items-center gap-2">
+          <span>✨</span>
+          <span class="font-arabic text-base sm:text-lg font-bold tracking-wide">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ — أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ وَأَتُوبُ إِلَيْهِ</span>
+          <span>✨</span>
+          <span data-i18n="marqueeSalawat">Recite Salawat upon the Prophet ﷺ</span>
+          <span>✨</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. EMERALD ISLAMIC PATTERN HEADER -->
+  <header class="islamic-pattern text-white pt-3 pb-14 sm:pb-16 px-4 relative shadow-md">
+    <div class="max-w-5xl mx-auto">
+      <!-- Top Controls Row: PWA Install Button + Language Switcher -->
+      <div class="flex items-center justify-between gap-2 mb-4 sm:mb-5">
+        <!-- Install PWA Trigger Button -->
+        <button
+          id="header-install-btn"
+          onclick="triggerPwaInstall()"
+          class="inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 active:scale-95 text-white border border-white/20 backdrop-blur-xs px-3 py-1.5 rounded-lg text-xs font-medium transition cursor-pointer"
+        >
+          <svg class="w-3.5 h-3.5 text-goldMarquee" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+          <span data-i18n="installApp">Install App</span>
+        </button>
+
+        <!-- Language Selector Dropdown -->
+        <div class="relative inline-flex items-center">
+          <div class="flex items-center gap-1.5 bg-[#073b29]/90 border border-white/20 rounded-lg px-2.5 py-1.5 text-xs sm:text-sm shadow-xs">
+            <svg class="w-4 h-4 text-goldMarquee shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <select
+              id="lang-select"
+              aria-label="Select Language"
+              onchange="changeLanguage(this.value)"
+              class="bg-transparent text-white font-medium focus:outline-none cursor-pointer pr-1"
+            >
+              <option value="en" class="bg-emeraldDeep text-white">English 🇬🇧</option>
+              <option value="id" class="bg-emeraldDeep text-white">Indonesia 🇮🇩</option>
+              <option value="ar" class="bg-emeraldDeep text-white">العربية 🇸🇦</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Title -->
+      <div class="text-center max-w-2xl mx-auto">
+        <h1
+          data-i18n="mainTitle"
+          class="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide text-white drop-shadow-xs"
+        >
+          Nusuk App Umrah Challenge KEYS
+        </h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="flex-1 max-w-5xl w-full mx-auto px-3.5 sm:px-6 -mt-9 sm:-mt-10 pb-16 z-10">
+
+    <!-- 3. FLOATING "SHARE A NEW CODE" CARD -->
+    <section aria-labelledby="share-heading" class="max-w-2xl mx-auto bg-white rounded-2xl shadow-[0_10px_30px_-5px_rgba(10,77,54,0.12)] border border-slate-100 p-4 sm:p-6">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <h2 id="share-heading" class="flex items-center gap-2 text-base sm:text-lg font-bold text-slate-800">
+          <span class="w-5 h-5 rounded-full bg-goldMarquee text-white inline-flex items-center justify-center shadow-xs">
+            <svg class="w-3.5 h-3.5 stroke-[3]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m-7-7h14" />
+            </svg>
+          </span>
+          <span data-i18n="shareHeading">Share a new code</span>
+        </h2>
+        <span id="extract-preview-badge" class="hidden text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emeraldDeep border border-emerald-200">
+          0 new keys detected
+        </span>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3 items-stretch">
+        <div class="flex-1 relative">
+          <textarea
+            id="code-input"
+            rows="3"
+            oninput="previewDetectedKeys()"
+            data-i18n-placeholder="inputPlaceholder"
+            placeholder="Paste unlimited keys, Nusuk links, or bulk text lists at once..."
+            class="w-full h-full min-h-[82px] rounded-xl border border-slate-200 bg-slate-50/60 focus:bg-white px-3.5 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emeraldDeep/25 focus:border-emeraldDeep transition resize-y"
+          ></textarea>
+        </div>
+
+        <button
+          id="submit-code-btn"
+          onclick="handleCodeSubmission()"
+          class="sm:w-36 bg-emeraldDeep hover:bg-emeraldDark active:scale-[0.98] text-white font-semibold text-sm px-5 py-3.5 rounded-xl shadow-sm hover:shadow transition flex items-center justify-center gap-2 cursor-pointer shrink-0"
+        >
+          <span data-i18n="submitBtn">Submit Code</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 4. SALAWAT DIVIDER & SEARCH BAR -->
+    <section class="max-w-2xl mx-auto mt-5 mb-5 text-center">
+      <p class="text-xs sm:text-sm text-slate-600 mb-3.5 flex items-center justify-center gap-1.5 flex-wrap">
+        <span data-i18n="reciteSalawatLabel">Recite Salawat:</span>
+        <span class="font-arabic text-base sm:text-lg font-bold text-slate-800">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ</span>
+      </p>
+
+      <!-- Pill Search Bar -->
+      <div class="relative flex items-center bg-white rounded-full shadow-xs border border-slate-200 focus-within:border-emeraldDeep focus-within:ring-2 focus-within:ring-emeraldDeep/15 px-4 py-2 transition">
+        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path stroke-linecap="round" d="M21 21l-4.35-4.35"></path>
+        </svg>
+
+        <input
+          id="search-input"
+          type="text"
+          oninput="handleSearch()"
+          data-i18n-placeholder="searchPlaceholder"
+          placeholder="Search codes (e.g. NG-SBs...)"
+          class="w-full bg-transparent px-3 py-1 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none"
+        />
+
+        <!-- Clear Search Button -->
+        <button
+          id="clear-search-btn"
+          onclick="clearSearch()"
+          title="Clear search"
+          class="hidden text-slate-400 hover:text-slate-600 p-1 mr-1 cursor-pointer"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <!-- Total Codes Pill Badge -->
+        <span
+          id="total-codes-badge"
+          class="shrink-0 bg-[#e7f3ee] text-emeraldDeep font-semibold text-[11px] sm:text-xs px-3 py-1 rounded-full whitespace-nowrap"
+        >
+          0 Codes
+        </span>
+      </div>
+
+      <!-- Quick Filter & History Utility Bar -->
+      <div class="mt-3.5 flex flex-wrap items-center justify-between gap-2 text-xs">
+        <div class="inline-flex items-center bg-white p-1 rounded-xl border border-slate-200/80 shadow-2xs">
+          <button
+            onclick="setFilter('all')"
+            id="filter-all"
+            class="filter-tab px-3 py-1.5 rounded-lg font-medium transition cursor-pointer bg-emeraldDeep text-white"
+            data-i18n="filterAll"
+          >
+            All Keys
+          </button>
+          <button
+            onclick="setFilter('uncopied')"
+            id="filter-uncopied"
+            class="filter-tab px-3 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 transition cursor-pointer"
+            data-i18n="filterUncopied"
+          >
+            Unused
+          </button>
+          <button
+            onclick="setFilter('copied')"
+            id="filter-copied"
+            class="filter-tab px-3 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 transition cursor-pointer"
+            data-i18n="filterCopied"
+          >
+            Copied (<span id="copied-count">0</span>)
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button
+            id="reset-history-btn"
+            onclick="clearCopiedHistory()"
+            class="hidden text-slate-500 hover:text-amber-700 underline underline-offset-2 px-2 py-1 transition cursor-pointer"
+            data-i18n="clearHistory"
+          >
+            Clear copied history
+          </button>
+          <button
+            id="delete-all-btn"
+            onclick="requestClearAllCodes()"
+            class="hidden text-slate-400 hover:text-rose-600 underline underline-offset-2 px-2 py-1 transition cursor-pointer"
+            data-i18n="deleteAllCodes"
+          >
+            Reset my added keys
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CODES GRID (3-Column Responsive Layout matching screenshot) -->
+    <section aria-label="Challenge Keys List">
+      <div id="codes-grid" class="grid grid-cols-3 gap-2 sm:gap-3.5 md:gap-4">
+        <!-- Cards rendered dynamically via JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="hidden text-center py-12 px-4 bg-white rounded-2xl border border-slate-100 mt-4 shadow-2xs">
+        <div class="w-12 h-12 rounded-full bg-emerald-50 text-emeraldDeep flex items-center justify-center mx-auto mb-3">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+          </svg>
+        </div>
+        <p id="empty-state-title" class="text-slate-800 font-bold text-sm sm:text-base" data-i18n="emptyStartTitle">No keys added yet (0 Codes)</p>
+        <p id="empty-state-desc" class="text-slate-500 text-xs sm:text-sm mt-1 max-w-md mx-auto" data-i18n="emptyStartDesc">Paste your Nusuk Challenge keys or invite links in the box above and tap Submit Code to start.</p>
+      </div>
+
+      <!-- Pagination / Load More -->
+      <div id="load-more-container" class="hidden mt-7 text-center">
+        <button
+          onclick="loadMoreCodes()"
+          class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 active:scale-[0.99] text-emeraldDeep font-semibold text-xs sm:text-sm px-6 py-3 rounded-xl border border-slate-200 shadow-xs transition cursor-pointer"
+        >
+          <span data-i18n="loadMore">Load More Keys</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200/80 py-5 px-4 text-center text-xs text-slate-500">
+    <p class="font-medium text-slate-700">Nusuk App Umrah Challenge KEYS</p>
+    <p class="mt-1 text-slate-400" data-i18n="footerNote">May Allah accept your Umrah and good deeds. Don't forget to recite Salawat.</p>
+  </footer>
+
+  <!-- FLOATING PWA INSTALL BANNER (Mobile Friendly) -->
+  <div
+    id="pwa-install-banner"
+    class="hidden fixed bottom-4 left-3 right-3 sm:left-auto sm:right-5 sm:max-w-sm bg-emeraldDeep text-white p-4 rounded-2xl shadow-2xl border border-emerald-600/40 z-40 transition-all"
+  >
+    <div class="flex items-start gap-3">
+      <div class="w-10 h-10 rounded-xl bg-goldMarquee text-emeraldDeep font-serif font-bold text-lg flex items-center justify-center shrink-0 shadow-xs">
+        N
+      </div>
+      <div class="flex-1 min-w-0">
+        <p class="font-bold text-sm text-white" data-i18n="pwaBannerTitle">Install Nusuk KEYS App</p>
+        <p class="text-xs text-emerald-100/85 mt-0.5 leading-relaxed" data-i18n="pwaBannerDesc">
+          Add to your phone's home screen for instant 1-tap access and offline support.
+        </p>
+        <div class="mt-3 flex items-center gap-2">
+          <button
+            onclick="triggerPwaInstall()"
+            class="bg-goldMarquee hover:bg-[#ebd075] text-[#1f1904] font-bold text-xs px-3.5 py-1.5 rounded-lg transition cursor-pointer"
+            data-i18n="installNow"
+          >
+            Install Now
+          </button>
+          <button
+            onclick="dismissInstallBanner()"
+            class="text-emerald-200 hover:text-white text-xs px-2.5 py-1.5 rounded-lg transition cursor-pointer"
+            data-i18n="later"
+          >
+            Later
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- iOS / Manual Install Instructions Modal -->
+  <div
+    id="ios-install-modal"
+    class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 flex items-end sm:items-center justify-center p-4"
+    onclick="if(event.target === this) closeIosModal()"
+  >
+    <div class="bg-white rounded-2xl max-w-md w-full p-5 sm:p-6 shadow-2xl border border-slate-100">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="font-bold text-base sm:text-lg text-slate-900" data-i18n="installGuideTitle">Install on Your Phone</h3>
+        <button onclick="closeIosModal()" class="text-slate-400 hover:text-slate-600 p-1 rounded-lg cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="space-y-3 text-xs sm:text-sm text-slate-600">
+        <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+          <p class="font-semibold text-slate-800 mb-1">📱 Android (Chrome / Edge):</p>
+          <p data-i18n="androidSteps">Tap the browser menu (⋮) in the top right corner, then select <strong>"Add to Home screen"</strong> or <strong>"Install app"</strong>.</p>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+          <p class="font-semibold text-slate-800 mb-1">🍎 iPhone / iPad (Safari):</p>
+          <p data-i18n="iosSteps">Tap the <strong>Share</strong> button at the bottom bar, scroll down, and tap <strong>"Add to Home Screen"</strong>.</p>
+        </div>
+      </div>
+      <button
+        onclick="closeIosModal()"
+        class="mt-4 w-full bg-emeraldDeep hover:bg-emeraldDark text-white font-semibold text-sm py-2.5 rounded-xl transition cursor-pointer"
+        data-i18n="gotIt"
+      >
+        Got it
+      </button>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div
+    id="toast"
+    role="status"
+    aria-live="polite"
+    class="fixed top-14 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 -translate-y-2 transition-all duration-200"
+  >
+    <div class="bg-slate-900/95 text-white text-xs sm:text-sm font-medium px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2 border border-white/10">
+      <span id="toast-icon" class="text-emerald-400">✓</span>
+      <span id="toast-message">Copied to clipboard!</span>
+    </div>
+  </div>
+
+  <!-- APPLICATION LOGIC & PWA SETUP -->
+  <script>
+    /*************************************************************************
+     * 1. PWA MANIFEST & SERVICE WORKER SETUP (Single-File Self-Contained)
+     *************************************************************************/
+    let deferredInstallPrompt = null;
+
+    function setupPWA() {
+      try {
+        // Create crisp SVG icon for App Manifest & Apple Touch Icon
+        const svgIcon = `
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <rect width="512" height="512" rx="112" fill="#0a4d36"/>
+            <rect x="28" y="28" width="456" height="456" rx="92" fill="none" stroke="#e3c059" stroke-width="10" stroke-opacity="0.6"/>
+            <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="#e3c059" font-family="Georgia, serif" font-weight="bold" font-size="220">N</text>
+            <text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="48" letter-spacing="6">KEYS</text>
+          </svg>
+        `.trim();
+        const iconUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgIcon);
+
+        const appleIconEl = document.getElementById('apple-icon');
+        if (appleIconEl) appleIconEl.href = iconUrl;
+
+        // Generate Dynamic Web App Manifest
+        const manifest = {
+          name: 'Nusuk App Umrah Challenge KEYS',
+          short_name: 'Nusuk KEYS',
+          description: 'Share and discover Nusuk App Umrah Challenge KEYS easily.',
+          start_url: window.location.href,
+          display: 'standalone',
+          background_color: '#f7f9f8',
+          theme_color: '#0a4d36',
+          orientation: 'portrait-primary',
+          icons: [
+            {
+              src: iconUrl,
+              sizes: '192x192',
+              type: 'image/svg+xml',
+              purpose: 'any maskable'
+            },
+            {
+              src: iconUrl,
+              sizes: '512x512',
+              type: 'image/svg+xml',
+              purpose: 'any maskable'
+            }
+          ]
+        };
+
+        const manifestBlob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
+        const manifestUrl = URL.createObjectURL(manifestBlob);
+        document.getElementById('pwa-manifest').setAttribute('href', manifestUrl);
+
+        // Register Inline Service Worker (works on HTTPS / localhost)
+        if ('serviceWorker' in navigator && (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
+          const swCode = `
+            const CACHE_NAME = 'nusuk-keys-v1';
+            self.addEventListener('install', (event) => {
+              self.skipWaiting();
+            });
+            self.addEventListener('activate', (event) => {
+              event.waitUntil(clients.claim());
+            });
+            self.addEventListener('fetch', (event) => {
+              event.respondWith(
+                fetch(event.request).catch(() => caches.match(event.request))
+              );
+            });
+          `;
+          const swBlob = new Blob([swCode], { type: 'application/javascript' });
+          const swUrl = URL.createObjectURL(swBlob);
+          navigator.serviceWorker.register(swUrl).catch(() => {
+            // Silently ignore if hosted inside restricted iframe sandbox
+          });
+        }
+      } catch (err) {
+        console.warn('PWA initialization note:', err);
+      }
+    }
+
+    // Listen for browser's native beforeinstallprompt event
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredInstallPrompt = e;
+      if (!localStorage.getItem('nusuk_pwa_banner_dismissed')) {
+        document.getElementById('pwa-install-banner').classList.remove('hidden');
+      }
+    });
+
+    // Show subtle install prompt on mobile browsers after 3 seconds if not standalone
+    function checkMobileInstallPrompt() {
+      const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (isStandalone) {
+        const headerBtn = document.getElementById('header-install-btn');
+        if (headerBtn) headerBtn.classList.add('hidden');
+        return;
+      }
+      if (isMobile && !localStorage.getItem('nusuk_pwa_banner_dismissed')) {
+        setTimeout(() => {
+          document.getElementById('pwa-install-banner').classList.remove('hidden');
+        }, 2500);
+      }
+    }
+
+    async function triggerPwaInstall() {
+      if (deferredInstallPrompt) {
+        deferredInstallPrompt.prompt();
+        const { outcome } = await deferredInstallPrompt.userChoice;
+        if (outcome === 'accepted') {
+          document.getElementById('pwa-install-banner').classList.add('hidden');
+        }
+        deferredInstallPrompt = null;
+      } else {
+        // Fallback modal with clear Android & iOS Add to Home Screen steps
+        document.getElementById('ios-install-modal').classList.remove('hidden');
+      }
+    }
+
+    function dismissInstallBanner() {
+      document.getElementById('pwa-install-banner').classList.add('hidden');
+      localStorage.setItem('nusuk_pwa_banner_dismissed', 'true');
+    }
+
+    function closeIosModal() {
+      document.getElementById('ios-install-modal').classList.add('hidden');
+    }
+
+    /*************************************************************************
+     * 2. INTERNATIONALIZATION (English, Bahasa Indonesia, العربية)
+     *************************************************************************/
+    const TRANSLATIONS = {
+      en: {
+        marqueeSalawat: 'Recite Salawat upon the Prophet ﷺ',
+        installApp: 'Install App',
+        mainTitle: 'Nusuk App Umrah Challenge KEYS',
+        shareHeading: 'Share a new code',
+        inputPlaceholder: 'Paste unlimited keys, Nusuk links, or bulk text lists at once...',
+        submitBtn: 'Submit Code',
+        reciteSalawatLabel: 'Recite Salawat:',
+        searchPlaceholder: 'Search codes (e.g. NG-SBs...)',
+        codesSuffix: 'Codes',
+        filterAll: 'All Keys',
+        filterUncopied: 'Unused',
+        filterCopied: 'Copied',
+        clearHistory: 'Clear copied history',
+        deleteAllCodes: 'Reset added keys',
+        confirmDeleteAll: 'Tap again to remove your added keys',
+        toastAllDeleted: 'Your custom added keys have been removed.',
+        cardSubtitle: 'Nusuk Challenge Key',
+        copyCode: 'Copy code',
+        copiedBadge: 'Copied',
+        openInNusuk: 'Open in Nusuk',
+        loadMore: 'Load More Keys',
+        emptyStartTitle: 'No keys available',
+        emptyStartDesc: 'Paste your Nusuk Challenge keys or invite links in the box above and tap Submit Code.',
+        noResultsTitle: 'No matching keys found',
+        noResultsDesc: 'Try searching with another prefix or clear your filter.',
+        detectedNewBadge: 'new unique key(s) detected',
+        detectedDuplicateBadge: 'duplicate(s) blocked',
+        footerNote: "May Allah accept your Umrah and good deeds. Don't forget to recite Salawat.",
+        pwaBannerTitle: 'Install Nusuk KEYS App',
+        pwaBannerDesc: "Add to your phone's home screen for instant 1-tap access and offline support.",
+        installNow: 'Install Now',
+        later: 'Later',
+        installGuideTitle: 'Install on Your Phone',
+        androidSteps: 'Tap the browser menu (⋮) in the top right corner, then select "Add to Home screen" or "Install app".',
+        iosSteps: 'Tap the Share button at the bottom bar, scroll down, and tap "Add to Home Screen".',
+        gotIt: 'Got it',
+        toastCopied: 'Copied! Opening Nusuk...',
+        toastCodeCopied: 'Code copied to clipboard!',
+        toastAdded: 'new unique key(s) added!',
+        toastSkippedSuffix: 'duplicate(s) skipped.',
+        toastNoValid: 'No new unique keys found in text.',
+        toastHistoryCleared: 'Copied history cleared.'
+      },
+      id: {
+        marqueeSalawat: 'Perbanyak Shalawat kepada Nabi ﷺ',
+        installApp: 'Install Aplikasi',
+        mainTitle: 'Nusuk App Umrah Challenge KEYS',
+        shareHeading: 'Bagikan kode baru',
+        inputPlaceholder: 'Tempel banyak kode sekaligus, link Nusuk, atau daftar teks tanpa batas...',
+        submitBtn: 'Kirim Kode',
+        reciteSalawatLabel: 'Baca Shalawat:',
+        searchPlaceholder: 'Cari kode (contoh: NG-SBs...)',
+        codesSuffix: 'Kode',
+        filterAll: 'Semua Kode',
+        filterUncopied: 'Belum Dipakai',
+        filterCopied: 'Sudah Disalin',
+        clearHistory: 'Hapus riwayat salin',
+        deleteAllCodes: 'Reset kode tambahan',
+        confirmDeleteAll: 'Ketuk sekali lagi untuk menghapus kode tambahan Anda',
+        toastAllDeleted: 'Kode tambahan Anda berhasil dihapus.',
+        cardSubtitle: 'Kunci Tantangan Nusuk',
+        copyCode: 'Salin kode',
+        copiedBadge: 'Tersalin',
+        openInNusuk: 'Buka di Nusuk',
+        loadMore: 'Muat Lebih Banyak Kode',
+        emptyStartTitle: 'Belum ada kode',
+        emptyStartDesc: 'Tempel daftar kode Nusuk Challenge atau link undangan di kotak atas, lalu tekan Kirim Kode.',
+        noResultsTitle: 'Kode tidak ditemukan',
+        noResultsDesc: 'Coba cari dengan awalan lain atau hapus filter.',
+        detectedNewBadge: 'kode unik baru terdeteksi',
+        detectedDuplicateBadge: 'duplikat ditolak',
+        footerNote: 'Semoga Allah menerima ibadah Umrah dan amal kebaikan kita. Jangan lupa bershalawat.',
+        pwaBannerTitle: 'Install Aplikasi Nusuk KEYS',
+        pwaBannerDesc: 'Tambahkan ke layar utama HP Anda untuk akses cepat 1-ketuk kapan saja.',
+        installNow: 'Install Sekarang',
+        later: 'Nanti',
+        installGuideTitle: 'Cara Install di HP Anda',
+        androidSteps: 'Ketuk menu browser (⋮) di pojok kanan atas, lalu pilih "Tambahkan ke layar utama" atau "Install aplikasi".',
+        iosSteps: 'Ketuk tombol Bagikan (Share) di bilah bawah Safari, gulir ke bawah, lalu ketuk "Tambah ke Layar Utama".',
+        gotIt: 'Mengerti',
+        toastCopied: 'Tersalin! Membuka Nusuk...',
+        toastCodeCopied: 'Kode berhasil disalin!',
+        toastAdded: 'kode unik baru berhasil ditambahkan!',
+        toastSkippedSuffix: 'duplikat dilewati.',
+        toastNoValid: 'Tidak ada kode unik baru yang ditemukan.',
+        toastHistoryCleared: 'Riwayat salin telah dibersihkan.'
+      },
+      ar: {
+        marqueeSalawat: 'أكثروا من الصلاة على النبي ﷺ',
+        installApp: 'تثبيت التطبيق',
+        mainTitle: 'مفاتيح تحدي العمرة - تطبيق نسك',
+        shareHeading: 'شارك رمزاً جديداً',
+        inputPlaceholder: 'الصق عدداً غير محدود من المفاتيح أو روابط نسك دفعة واحدة...',
+        submitBtn: 'إرسال الرمز',
+        reciteSalawatLabel: 'صلِّ على النبي:',
+        searchPlaceholder: 'ابحث عن الرموز (مثال: NG-SBs...)',
+        codesSuffix: 'رمز',
+        filterAll: 'جميع الرموز',
+        filterUncopied: 'غير مستخدم',
+        filterCopied: 'تم النسخ',
+        clearHistory: 'مسح سجل النسخ',
+        deleteAllCodes: 'إعادة ضبط الإضافات',
+        confirmDeleteAll: 'اضغط مرة أخرى لحذف الرموز التي أضفتها',
+        toastAllDeleted: 'تمت إزالة الرموز التي أضفتها.',
+        cardSubtitle: 'مفتاح تحدي نسك',
+        copyCode: 'نسخ الرمز',
+        copiedBadge: 'تم النسخ',
+        openInNusuk: 'افتح في نسك',
+        loadMore: 'تحميل المزيد من الرموز',
+        emptyStartTitle: 'لا توجد رموز متاحة',
+        emptyStartDesc: 'الصق مفاتيح تحدي نسك أو روابط الدعوة في المربع أعلاه ثم اضغط على إرسال الرمز.',
+        noResultsTitle: 'لم يتم العثور على رموز مطابقة',
+        noResultsDesc: 'جرب البحث برمز آخر أو قم بإزالة الفلتر.',
+        detectedNewBadge: 'رمز جديد فريد تم اكتشافه',
+        detectedDuplicateBadge: 'مكرر تم منعه',
+        footerNote: 'تقبل الله عمرتكم وصالح أعمالكم. لا تنسوا الصلاة على النبي ﷺ.',
+        pwaBannerTitle: 'تثبيت تطبيق مفاتيح نسك',
+        pwaBannerDesc: 'أضف التطبيق إلى الشاشة الرئيسية لهاتفك للوصول السريع بنقرة واحدة.',
+        installNow: 'تثبيت الآن',
+        later: 'لاحقاً',
+        installGuideTitle: 'طريقة التثبيت على هاتفك',
+        androidSteps: 'اضغط على قائمة المتصفح (⋮) في الزاوية العلوية، ثم اختر "الإضافة إلى الشاشة الرئيسية" أو "تثبيت التطبيق".',
+        iosSteps: 'اضغط على زر المشاركة (Share) في الشريط السفلي لمتصفح سفاري، ثم اختر "إضافة إلى الصفحة الرئيسية".',
+        gotIt: 'فهمت',
+        toastCopied: 'تم النسخ! جاري فتح نسك...',
+        toastCodeCopied: 'تم نسخ الرمز إلى الحافظة!',
+        toastAdded: 'تمت إضافة رموز جديدة بنجاح!',
+        toastSkippedSuffix: 'مكرر تم تخطيه.',
+        toastNoValid: 'لم يتم العثور على رموز جديدة فريدة.',
+        toastHistoryCleared: 'تم مسح سجل النسخ.'
+      }
+    };
+
+    let currentLang = localStorage.getItem('nusuk_lang') || 'en';
+
+    function changeLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('nusuk_lang', lang);
+
+      // Update HTML lang and direction (RTL for Arabic)
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      const dict = TRANSLATIONS[lang] || TRANSLATIONS.en;
+
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (dict[key]) {
+          el.setAttribute('placeholder', dict[key]);
+        }
+      });
+
+      updateCounterBadge();
+      renderCodes();
+    }
+
+    /*************************************************************************
+     * 3. NUSUK CHALLENGE CODES DATASET (START FROM 0) & STRICT DEDUPLICATION
+     *************************************************************************/
+    const BASE_TOTAL_COUNT = 0;
+
+    const INITIAL_CODES = [];
+
+    let userAddedCodes = [];
+    let allCodes = [...INITIAL_CODES];
+    let copiedCodesSet = new Set();
+    let activeHighlightCode = '';
+    let currentFilter = 'all';
+    let searchQuery = '';
+    let visibleLimit = 30;
+    let confirmDeleteTimer = null;
+    let isConfirmingDelete = false;
+
+    function loadState() {
+      try {
+        const savedUserCodes = JSON.parse(localStorage.getItem('nusuk_user_codes') || '[]');
+        if (Array.isArray(savedUserCodes)) {
+          userAddedCodes = savedUserCodes;
+        }
+        const savedCopied = JSON.parse(localStorage.getItem('nusuk_copied_codes') || '[]');
+        if (Array.isArray(savedCopied)) {
+          copiedCodesSet = new Set(savedCopied);
+        }
+      } catch (e) {
+        console.error('Error loading storage:', e);
+      }
+      rebuildCodeList();
+    }
+
+    function rebuildCodeList() {
+      const combined = [...userAddedCodes, ...INITIAL_CODES];
+      const unique = [];
+      const seen = new Set();
+
+      for (const code of combined) {
+        const key = code.trim().toLowerCase();
+        if (key && !seen.has(key)) {
+          unique.push(code.trim());
+          seen.add(key);
+        }
+      }
+      allCodes = unique;
+      updateCounterBadge();
+      updateCopiedStats();
+    }
+
+    function updateCounterBadge() {
+      const dict = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+      const totalCount = BASE_TOTAL_COUNT + userAddedCodes.length;
+      const badge = document.getElementById('total-codes-badge');
+      if (badge) {
+        badge.textContent = `${totalCount} ${dict.codesSuffix}`;
+      }
+    }
+
+    function updateCopiedStats() {
+      const countEl = document.getElementById('copied-count');
+      const resetBtn = document.getElementById('reset-history-btn');
+      const deleteAllBtn = document.getElementById('delete-all-btn');
+
+      if (countEl) countEl.textContent = copiedCodesSet.size;
+      if (resetBtn) {
+        if (copiedCodesSet.size > 0) {
+          resetBtn.classList.remove('hidden');
+        } else {
+          resetBtn.classList.add('hidden');
+        }
+      }
+      if (deleteAllBtn) {
+        if (userAddedCodes.length > 0) {
+          deleteAllBtn.classList.remove('hidden');
+        } else {
+          deleteAllBtn.classList.add('hidden');
+        }
+      }
+    }
+
+    /*************************************************************************
+     * 4. UNLIMITED BULK KEY EXTRACTION & STRICT DUPLICATE PREVENTION
+     *************************************************************************/
+    function extractUniqueKeysFromText(rawText) {
+      if (!rawText || !rawText.trim()) return [];
+
+      const candidates = [];
+
+      // 1. Match standard Nusuk Challenge key pattern (e.g., NG-DZYYpkFZ, AB-12345678)
+      const standardRegex = /\b[A-Za-z]{2,5}-[A-Za-z0-9_-]{4,20}\b/g;
+      let match;
+      while ((match = standardRegex.exec(rawText)) !== null) {
+        candidates.push(match[0]);
+      }
+
+      // 2. Match URL query parameters or invite path segments (e.g., ?code=XYZ, ?key=XYZ, /invite/XYZ)
+      const urlParamRegex = /(?:key|code|invite|ref|challenge|token)[=/]([A-Za-z0-9_-]{5,24})/gi;
+      while ((match = urlParamRegex.exec(rawText)) !== null) {
+        if (match[1]) candidates.push(match[1]);
+      }
+
+      // 3. Scan line-by-line / comma / space separated standalone alphanumeric keys
+      const tokens = rawText.split(/[\s,;|"'<>()[\]{}\n\r\t]+/);
+      for (const token of tokens) {
+        const clean = token.trim();
+        if (!clean || clean.startsWith('http') || clean.includes('/') || clean.includes('.')) continue;
+
+        if (/^[A-Za-z0-9]{2,5}-[A-Za-z0-9_-]{4,20}$/.test(clean) || /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z0-9]{6,18}$/.test(clean)) {
+          candidates.push(clean);
+        }
+      }
+
+      // Deduplicate within the pasted input itself (case-insensitive)
+      const unique = [];
+      const seen = new Set();
+      for (const item of candidates) {
+        const normalizedKey = item.trim().toLowerCase();
+        if (normalizedKey && !seen.has(normalizedKey)) {
+          seen.add(normalizedKey);
+          unique.push(item.trim());
+        }
+      }
+      return unique;
+    }
+
+    function analyzeTextareaKeys(rawText) {
+      const extracted = extractUniqueKeysFromText(rawText);
+      // Check against ALL existing codes (both user-added and initial dataset)
+      const existingLower = new Set(allCodes.map((c) => c.trim().toLowerCase()));
+      const newKeys = [];
+      let duplicateCount = 0;
+
+      for (const code of extracted) {
+        const normalized = code.trim().toLowerCase();
+        if (!existingLower.has(normalized)) {
+          newKeys.push(code.trim());
+          existingLower.add(normalized);
+        } else {
+          duplicateCount++;
+        }
+      }
+
+      return { extracted, newKeys, duplicateCount };
+    }
+
+    function previewDetectedKeys() {
+      const input = document.getElementById('code-input').value;
+      const badge = document.getElementById('extract-preview-badge');
+      const dict = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+      const { extracted, newKeys, duplicateCount } = analyzeTextareaKeys(input);
+
+      if (extracted.length > 0) {
+        let label = `${newKeys.length} ${dict.detectedNewBadge}`;
+        if (duplicateCount > 0) {
+          label += ` (${duplicateCount} ${dict.detectedDuplicateBadge})`;
+        }
+        badge.textContent = label;
+        badge.classList.remove('hidden');
+      } else {
+        badge.classList.add('hidden');
+      }
+    }
+
+    function handleCodeSubmission() {
+      const inputEl = document.getElementById('code-input');
+      const rawText = inputEl.value;
+      const dict = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+      const { newKeys, duplicateCount } = analyzeTextareaKeys(rawText);
+
+      // Strictly block submission if all pasted keys are duplicates
+      if (newKeys.length === 0) {
+        const msg = duplicateCount > 0
+          ? `${dict.toastNoValid} (${duplicateCount} ${dict.toastSkippedSuffix})`
+          : dict.toastNoValid;
+        showToast(msg, 'warning');
+        inputEl.focus();
+        return;
+      }
+
+      // Prepend only verified non-duplicate keys to the top of the list
+      userAddedCodes = [...newKeys, ...userAddedCodes];
+      localStorage.setItem('nusuk_user_codes', JSON.stringify(userAddedCodes));
+
+      activeHighlightCode = newKeys[0];
+      inputEl.value = '';
+      document.getElementById('extract-preview-badge').classList.add('hidden');
+
+      rebuildCodeList();
+      setFilter('all');
+
+      let toastText = `${newKeys.length} ${dict.toastAdded}`;
+      if (duplicateCount > 0) {
+        toastText += ` (${duplicateCount} ${dict.toastSkippedSuffix})`;
+      }
+      showToast(toastText, 'success');
+    }
+
+    function requestClearAllCodes() {
+      const dict = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+      const btn = document.getElementById('delete-all-btn');
+
+      if (!isConfirmingDelete) {
+        isConfirmingDelete = true;
+        btn.textContent = dict.confirmDeleteAll;
+        btn.classList.add('text-rose-600', 'font-semibold');
+        if (confirmDeleteTimer) clearTimeout(confirmDeleteTimer);
+        confirmDeleteTimer = setTimeout(() => {
+          isConfirmingDelete = false;
+          btn.textContent = dict.deleteAllCodes;
+          btn.classList.remove('text-rose-600', 'font-semibold');
+        }, 3500);
+        return;
+      }
+
+      isConfirmingDelete = false;
+      if (confirmDeleteTimer) clearTimeout(confirmDeleteTimer);
+      btn.textContent = dict.deleteAllCodes;
+      btn.classList.remove('text-rose-600', 'font-semibold');
+
+      userAddedCodes = [];
+      activeHighlightCode = '';
+      localStorage.removeItem('nusuk_user_codes');
+
+      rebuildCodeList();
+      renderCodes();
+      showToast(dict.toastAllDeleted, 'info');
+    }
+
+    /*************************************************************************
+     * 5. COPY TO CLIPBOARD & OPEN IN NUSUK
+     *************************************************************************/
+    function copyTextToClipboard(text) {
+      // Reliable fallback using execCommand('copy') as recommended for WebViews/iFrames
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-9999px';
+      textArea.style.top = '0';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+
+      let success = false;
+      try {
+        success = document.execCommand('copy');
+      } catch (err) {
+        success = false;
+      }
+      document.body.removeChild(textArea);
+
+      if (!success && navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).catch(() => {});
+      }
+    }
+
+    function markCodeAsCopied(code) {
+      copiedCodesSet.add(code);
+      activeHighlightCode = code;
+      localStorage.setItem('nusuk_copied_codes', JSON.stringify(Array.from(copiedCodesSet)));
+      updateCopiedStats();
+      renderCodes();
+    }
+
+    function handleCopyOnly(code) {
+      const dict = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+      copyTextToClipboard(code);
+      markCodeAsCopied(code);
+      showToast(`${dict.toastCodeCopied} (${code})`, 'success');
+    }
+
+    function handleOpenInNusuk(code) {
+      const dict = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+      copyTextToClipboard(code);
+      markCodeAsCopied(code);
+      showToast(`${dict.toastCopied} (${code})`, 'success');
+
+      // Open Nusuk web / app link shortly after copying so user sees confirmation
+      setTimeout(() => {
+        window.open('https://www.nusuk.sa/', '_blank', 'noopener,noreferrer');
+      }, 450);
+    }
+
+    function clearCopiedHistory() {
+      const dict = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+      copiedCodesSet.clear();
+      localStorage.removeItem('nusuk_copied_codes');
+      updateCopiedStats();
+      renderCodes();
+      showToast(dict.toastHistoryCleared, 'info');
+    }
+
+    /*************************************************************************
+     * 6. FILTERING, SEARCHING & RENDERING CARDS
+     *************************************************************************/
+    function handleSearch() {
+      const input = document.getElementById('search-input');
+      searchQuery = input.value.trim().toLowerCase();
+      const clearBtn = document.getElementById('clear-search-btn');
+
+      if (searchQuery.length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+      renderCodes();
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('search-input');
+      input.value = '';
+      searchQuery = '';
+      document.getElementById('clear-search-btn').classList.add('hidden');
+      renderCodes();
+    }
+
+    function setFilter(filterType) {
+      currentFilter = filterType;
+      document.querySelectorAll('.filter-tab').forEach((btn) => {
+        btn.classList.remove('bg-emeraldDeep', 'text-white');
+        btn.classList.add('text-slate-600');
+      });
+      const activeBtn = document.getElementById(`filter-${filterType}`);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-emeraldDeep', 'text-white');
+        activeBtn.classList.remove('text-slate-600');
+      }
+      renderCodes();
+    }
+
+    function loadMoreCodes() {
+      visibleLimit += 18;
+      renderCodes();
+    }
+
+    function renderCodes() {
+      const grid = document.getElementById('codes-grid');
+      const emptyState = document.getElementById('empty-state');
+      const emptyTitle = document.getElementById('empty-state-title');
+      const emptyDesc = document.getElementById('empty-state-desc');
+      const loadMoreContainer = document.getElementById('load-more-container');
+      const dict = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+      const isRtl = currentLang === 'ar';
+
+      // Filter codes while preserving original #index
+      const indexedCodes = allCodes.map((code, idx) => ({
+        code,
+        number: idx + 1,
+        isCopied: copiedCodesSet.has(code),
+        isHighlighted: activeHighlightCode === code
+      }));
+
+      const filtered = indexedCodes.filter((item) => {
+        if (searchQuery && !item.code.toLowerCase().includes(searchQuery)) {
+          return false;
+        }
+        if (currentFilter === 'copied' && !item.isCopied) return false;
+        if (currentFilter === 'uncopied' && item.isCopied) return false;
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        loadMoreContainer.classList.add('hidden');
+
+        if (allCodes.length === 0) {
+          emptyTitle.textContent = dict.emptyStartTitle;
+          emptyDesc.textContent = dict.emptyStartDesc;
+        } else {
+          emptyTitle.textContent = dict.noResultsTitle;
+          emptyDesc.textContent = dict.noResultsDesc;
+        }
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      const itemsToShow = filtered.slice(0, visibleLimit);
+
+      if (filtered.length > visibleLimit) {
+        loadMoreContainer.classList.remove('hidden');
+      } else {
+        loadMoreContainer.classList.add('hidden');
+      }
+
+      const arrowChar = isRtl ? '←' : '→';
+      const externalArrow = isRtl ? '↖' : '↗';
+
+      grid.innerHTML = itemsToShow
+        .map((item) => {
+          // Highlight card with warm gold border & soft cream glow
+          const cardBorderClass = item.isHighlighted
+            ? 'border-[#e0c46c] bg-[#fffdf7] ring-2 ring-[#e0c46c]/35 shadow-md'
+            : item.isCopied
+            ? 'border-emerald-200/90 bg-white/95 shadow-xs'
+            : 'border-slate-100 bg-white shadow-[0_2px_10px_-3px_rgba(0,0,0,0.06)] hover:shadow-md hover:border-slate-200';
+
+          const codeTextColor = item.isHighlighted ? 'text-emeraldDeep' : 'text-slate-900';
+
+          return `
+            <article class="relative rounded-2xl border ${cardBorderClass} p-2.5 sm:p-4 transition-all duration-150 flex flex-col justify-between overflow-hidden group">
+              <!-- Top Right Curved Copy Corner Button -->
+              <button
+                onclick="handleCopyOnly('${escapeHtml(item.code)}')"
+                title="${dict.copyCode}"
+                aria-label="${dict.copyCode} ${escapeHtml(item.code)}"
+                class="copy-corner-btn absolute top-0 ${isRtl ? 'left-0' : 'right-0'} w-8 h-8 sm:w-11 sm:h-10 bg-slate-100/90 hover:bg-emerald-50 text-slate-500 hover:text-emeraldDeep flex items-center justify-center transition cursor-pointer"
+              >
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+
+              <div>
+                <!-- Index Badge & Optional Copied Tag -->
+                <div class="flex flex-wrap items-center gap-1 sm:gap-2 mb-2 sm:mb-2.5 pr-6">
+                  <span class="inline-flex items-center px-1.5 sm:px-2 py-0.5 rounded-md text-[10px] sm:text-[11px] font-bold bg-[#e9f3ef] text-emeraldDeep">
+                    #${item.number}
+                  </span>
+                  ${
+                    item.isCopied
+                      ? `<span class="inline-flex items-center gap-0.5 px-1.5 sm:px-2 py-0.5 rounded-md text-[9px] sm:text-[10px] font-semibold bg-amber-50 text-amber-700 border border-amber-200/70">
+                          ✓ <span class="hidden sm:inline">${dict.copiedBadge}</span>
+                        </span>`
+                      : ''
+                  }
+                </div>
+
+                <!-- Main Monospace Code -->
+                <div
+                  onclick="handleCopyOnly('${escapeHtml(item.code)}')"
+                  class="font-mono text-xs sm:text-base md:text-[17px] font-bold tracking-tight ${codeTextColor} cursor-pointer select-all truncate"
+                >
+                  ${escapeHtml(item.code)}
+                </div>
+              </div>
+
+              <div class="mt-3 sm:mt-4">
+                <!-- Subtitle & Copy Link Row -->
+                <div class="flex items-center justify-between text-[10px] sm:text-xs mb-2 sm:mb-2.5 gap-1">
+                  <span class="text-slate-400 font-medium truncate">${dict.cardSubtitle}</span>
+                  <button
+                    onclick="handleCopyOnly('${escapeHtml(item.code)}')"
+                    class="text-[#c58f17] hover:text-[#9e700d] font-semibold inline-flex items-center gap-0.5 sm:gap-1 transition cursor-pointer shrink-0"
+                  >
+                    <span>${dict.copyCode}</span>
+                    <span>${arrowChar}</span>
+                  </button>
+                </div>
+
+                <!-- Full-Width Deep Emerald Action Button -->
+                <button
+                  onclick="handleOpenInNusuk('${escapeHtml(item.code)}')"
+                  class="w-full bg-emeraldDeep hover:bg-emeraldDark active:scale-[0.99] text-white font-semibold text-[10px] sm:text-xs md:text-[13px] py-2 sm:py-2.5 px-2 sm:px-4 rounded-xl shadow-xs transition flex items-center justify-center gap-1 sm:gap-1.5 cursor-pointer"
+                >
+                  <span class="truncate">${dict.openInNusuk}</span>
+                  <span class="text-xs sm:text-sm leading-none opacity-90 shrink-0">${externalArrow}</span>
+                </button>
+              </div>
+            </article>
+          `;
+        })
+        .join('');
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    /*************************************************************************
+     * 7. TOAST FEEDBACK SYSTEM
+     *************************************************************************/
+    let toastTimer = null;
+
+    function showToast(message, type = 'success') {
+      const toastEl = document.getElementById('toast');
+      const msgEl = document.getElementById('toast-message');
+      const iconEl = document.getElementById('toast-icon');
+
+      msgEl.textContent = message;
+      if (type === 'warning') {
+        iconEl.textContent = '!';
+        iconEl.className = 'text-amber-400 font-bold';
+      } else if (type === 'info') {
+        iconEl.textContent = 'ℹ';
+        iconEl.className = 'text-sky-400 font-bold';
+      } else {
+        iconEl.textContent = '✓';
+        iconEl.className = 'text-emerald-400 font-bold';
+      }
+
+      toastEl.classList.remove('opacity-0', '-translate-y-2');
+      toastEl.classList.add('opacity-100', 'translate-y-0');
+
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toastEl.classList.remove('opacity-100', 'translate-y-0');
+        toastEl.classList.add('opacity-0', '-translate-y-2');
+      }, 2600);
+    }
+
+    /*************************************************************************
+     * 8. INITIALIZATION ON LOAD
+     *************************************************************************/
+    window.addEventListener('DOMContentLoaded', () => {
+      setupPWA();
+      loadState();
+
+      const langSelect = document.getElementById('lang-select');
+      if (langSelect) langSelect.value = currentLang;
+
+      changeLanguage(currentLang);
+      checkMobileInstallPrompt();
+    });
+  </script>
+</body>
+</html>
